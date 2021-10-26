@@ -46,7 +46,7 @@ export default function MovieDetailsView() {
       {movie && (
         <>
           <button type="button" onClick={clickBtn} className={css.btnHome}>
-            <FaRegArrowAltCircleLeft size={14} /> Go back
+             Go back
           </button>
           <div className={css.movieBox}>
             <div>

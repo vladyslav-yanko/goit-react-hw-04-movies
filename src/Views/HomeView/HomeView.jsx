@@ -5,7 +5,7 @@ import { fetchPopularMoviesOfTheDay } from '../../API/themoviedb';
 import css from './HomeView.module.css';
 
 export default function HomeView() {
-  window.document.title = 'Movies';
+  
 
   const { url } = useRouteMatch();
   const location = useLocation();
@@ -19,7 +19,7 @@ export default function HomeView() {
 
   return (
     <>
-      <h2>Trending today</h2>
+      <h2>Trending</h2>
       {popularMovies && (
         <ul className={css.list}>
           {popularMovies.map(movie => (
@@ -31,7 +31,7 @@ export default function HomeView() {
                 }}
                 className={css.link}
               >
-                <FaFilm size={16} className={css.icon} /> {movie.title}
+                {movie.title}
               </Link>
             </li>
           ))}
